@@ -57,3 +57,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/cart/remove/{id}', [App\Http\Controllers\cartcontroller::class, 'remove'])->name('cartRemove');
     Route::post('cart/update/{id}',[App\Http\Controllers\cartcontroller::class,'update'])->name('cartUpadate');
 });
+Route::get('/order/create',[App\Http\Controllers\orderController::class,'ordercreate'])->name('order.save');

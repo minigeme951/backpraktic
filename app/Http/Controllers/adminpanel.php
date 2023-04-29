@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\order;
 use \App\Models\product;
 use \App\Models\category;
 use Illuminate\Http\Request;
@@ -12,9 +13,9 @@ class adminpanel extends Controller
     {
         $prod = product::all();
         $cat = category::all();
-        return view('admin', ['prod' => $prod, 'cat' => $cat]);
+        $order= order::all();
+        return view('admin', ['prod' => $prod, 'cat' => $cat, 'order'=>$order]);
     }
-
     public function proddel($id)
     {
         product::where('id', $id)->delete();

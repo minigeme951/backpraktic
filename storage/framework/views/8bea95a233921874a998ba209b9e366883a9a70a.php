@@ -34,6 +34,15 @@
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
+        <div class="row">
+            <form action="<?php echo e(route('order.save')); ?>">
+                <input placeholder="Введите пароль для подтверждения заказа" type="password" name="pass" required>
+                <div class="btn-group d-flex justify-content-center">
+                    <button  type="submit" class="btn btn-success">Сформировать заказ</button>
+            </form>
+            <a class="btn btn-primary" href="<?php echo e(url('/catalog')); ?>">Продолжить покупки</a>
+        </div>
+        </div>
     </div>
 
 

@@ -40,6 +40,27 @@
             </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
+    <h3 class=" d-flex justify-content-center">Управление заказами</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">Номер заказа</div>
+            <div class="col">Количество товара</div>
+            <div class="col">статус</div>
+            <div class="col">Действие</div>
+        </div>
+        <?php $__currentLoopData = $order; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $oborder): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="row">
+                <div class="col"><a href=""><?php echo e($oborder->Order_id); ?></a></div>
+                <div class="col"><h4>Количество товара в заказе:<?php echo e($oborder->count); ?></h4></div>
+                <div class="col">
+                    <h4><?php echo e($oborder->status); ?></h4>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </div>
 
 <?php $__env->stopSection(); ?>
 

@@ -42,5 +42,26 @@
             </div>
         @endforeach
     </div>
+    <h3 class=" d-flex justify-content-center">Управление заказами</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">Номер заказа</div>
+            <div class="col">Количество товара</div>
+            <div class="col">статус</div>
+            <div class="col">Действие</div>
+        </div>
+        @foreach($order as $oborder)
+            <div class="row">
+                <div class="col"><a href="">{{$oborder->Order_id}}</a></div>
+                <div class="col"><h4>Количество товара в заказе:{{$oborder->count}}</h4></div>
+                <div class="col">
+                    <h4>{{$oborder->status}}</h4>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        @endforeach
+    </div>
 
 @endsection
